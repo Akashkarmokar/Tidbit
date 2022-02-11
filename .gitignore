@@ -105,3 +105,6 @@ dist
 
 # Lock file
 package-lock.json
+
+# VSCODE project settings
+.vscode

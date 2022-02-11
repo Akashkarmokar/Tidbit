@@ -11,6 +11,9 @@ const cookieParser = require('cookie-parser');
  * Internal Dependencies
  */
 const { notFoundHandler, genericError } = require('./middlewares/common/errorHandler');
+const loginRouter = require('./Router/loginRouter');
+const usersRouter = require('./Router/usersRouter');
+const inboxRouter = require('./Router/inboxRouter');
 
 /**
  * Express App
@@ -52,7 +55,9 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 /**
  * Routing setup
  */
-
+app.use('/', loginRouter);
+app.use('/users', usersRouter);
+app.use('/inbox', inboxRouter);
 /**
  * Not Found Handler
  */
