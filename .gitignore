@@ -108,3 +108,6 @@ package-lock.json
 
 # VSCODE project settings
 .vscode
+
+# Avater Upload folder
+public/uploads

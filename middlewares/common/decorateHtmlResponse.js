@@ -9,6 +9,9 @@ const decorateHtmlResponse = {};
 decorateHtmlResponse.setTitle = (pageTitle) => (request, response, next) => {
     response.locals.html = true;
     response.locals.title = `${pageTitle}-${process.env.APP_NAME}`;
+    response.locals.loggedInUser = {};
+    response.locals.errors = {};
+    response.locals.data = {};
     next();
 };
 /**
